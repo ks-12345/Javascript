@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 2- Matriz</title>
+</head>
+<body>
+    <input type="text" id="matrizSomalinhas" placeholder="Dirigir 9 numeros separados por virgula (3x3) ">
+    <button onclick="somarLinhasMatriz()">Somar Linhas</button>
+      <p id="resultadoSomaLinha"></p>
+
+      <script>
+          function somarLinhasMatriz() {
+        const vetor= document.getElementById("matrizSomalinhas").value.split(",").map(Number);
+        const matriz = [];
+          }
+ 
+      for(let i= 0; i < 3; i++) {
+       matriz[i] = vetor.slice(i * 3, (i + 1) * 3);
+      }
+        let resultado= "";
+        for(let i = 0; i < 3; i++) {
+            let soma = 0;
+            for (let j = 0; j < 3; j++)
+            { soma += matriz[i][j];
+
+            }
+            resultado +="Linha " + (i + 1 ) + ": " + soma + "<br>";
+             
+        }
+document.getElementById("resultadoSomaLinha").innerHTML= resultado;
+        
+          </script>
+</body>
+</html>

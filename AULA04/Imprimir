@@ -1,0 +1,38 @@
+//imprimir numeros pares 1 a 20 
+
+for (let i = 1; i <= 20; i++) {
+ if i % 2 === 0) {
+      console.log(i);
+   {
+}
+
+//let numero = readlinesync
+let numero = 5
+
+numero = Number (numero)
+
+let fatorial = 1;
+for (let i = 1; i <= numero; i++) {
+    fatorial *= i;
+}
+
+console.log(`o fatorial de ${numero} è ${fatorial} .`);
+
+//iterar sobre um array 
+let frutas = ["maça", "banana", "laranja"];
+for (let i = 0; i < frutas.length; i++) {
+    console.log(frutas[i])
+}
+
+//iterar sobre um array 
+let cidades = ["LIMERA", "BAHIA", "CURITIBA", "RIO DE JANEIRO", "SAO PAULO"];
+for (let i = 0; i < cidades.length; i++) {
+    console.log(cidades[i])
+}
+
+//calcular a soma do numeros
+let soma = 0 
+for (let i = 1; i <= 10; i++) {
+    soma += i;
+}
+ console.log(soma);

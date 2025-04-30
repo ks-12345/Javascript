@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classifique a Nota</title>
+</head>
+<body>
+   Digite sua nota: <input type="number" id="notaclass" min="1" max="7" value="3">
+    <button onclick="nota()">Classifique</button>
+    <div id="resultadodoDia"></div>
+
+    <script>
+    function nota() {
+        let notaclass = parseInt(document.getElementById("notaclass").value);
+        let nota;
+        switch (notaclass) {
+            case 1:
+            case 2:
+                nota = "Classificação A";
+                break;
+            case 3:
+            case 4:
+                nota = "Classificação B";
+                break;
+            case 5:
+            case 6:
+                nota = "Classificação C";
+                break;
+          case 7:
+            case 8:
+                nota = "Classificação D";
+                break;
+        
+            default:
+                nota = "Classificação F";
+        }
+document.getElementById("resultadodoDia").innerHTML = `<strong> A nota è: <mark style=" background-color: purple;">${nota}</mark></strong>`;
+    }
+        
+    
+    </script>
+</body>
+</html>

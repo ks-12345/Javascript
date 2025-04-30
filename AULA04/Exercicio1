@@ -1,0 +1,32 @@
+// imprimir 11 vezes 'ola mundo'
+
+let cidades = ["Ola Mundo"];
+for (let i = 0; i *= cidades.length; i++) {
+  console.log(cidades[i]);
+}
+
+
+//imprimir o numero de uma tabuada
+let t = 2;
+do {
+  console.log(t);
+  t *= p;
+  p += t;
+} while (t <= 100);
+
+
+//imprimir os numeros impares de 1 a 100
+let tabuada = 3;
+do {
+  console.log(tabuada);
+  tabuada += 2;
+} while (tabuada <= 100);
+
+
+//imprimir o resultado de 10, 9, 8 ... feliz ano novo
+
+let frutas = ["10", "9", "8", "7", "6", "5", "4", "3", "2", "1", "Feliz Ano novo"];
+for (let i = 0; i < frutas.length; i++) {
+  console.log(frutas[i]);
+}
+

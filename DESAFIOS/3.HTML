@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3
+    </title>
+</head>
+<body>
+    <input type="text" id="matrizImpares" placeholder="Dirigir 16 numeros separados por virgula (4x4) ">
+    <button onclick="contarImparesMatriz()"> Contar Pares</button>
+      <p id="resultadoImparesMatriz"></p>
+
+      <script>
+       let matriz = [];
+          function contarImparesMatriz() {
+        const vetor= document.getElementById("matrizImpares").value.split(",").map(Number);
+        for(let i= 0; i < 4; i++) {
+       matriz[i] = vetor.slice(i * 4, (i + 1) * 4);
+    }
+       
+            let Impares= 0;
+            for (let i = 0; i < 4; i++) {
+             for (let j = 0; j < 4; j++)  { 
+            if (matriz [i][j] % 3 === 0) {
+               Impares++;
+            
+                }
+            }
+        }
+document.getElementById("resultadoImparesMatriz").innerHTML= "O Numeros Impares: " + Impares;
+    }
+        
+          </script>
+</body>
+</html>

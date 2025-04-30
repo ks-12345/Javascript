@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoria de Filme</title>
+</head>
+<body>
+    Classificaçao Etaria: <input type="text" id="Classificaçao" value="14"><br><br>
+    <button onclick="exibirCategoria()">Exibir  Categoria</button>
+    <p id="exibirCategoria"></p> 
+
+    <script>
+        function exibirCategoria() {
+            let idade = document.getElementById("Classificaçao").value; 
+            let categoria;
+            switch (idade) {
+                case "Livre":
+                    categoria = "Livre para todas as idades.";
+                    break;
+                case "10":
+                case "12":
+                    categoria = "Livre para todas as idades.";
+                    break;
+                case "16":
+                    categoria = "Livre só para maiores de 16 anos.";
+                    break;
+                case "18":
+                    categoria = "Livre só para maiores de 18 anos.";
+                    break;
+                default:
+                    categoria = "Classificaçao Invalida!";
+            }
+            document.getElementById("exibirCategoria").innerHTML = `${categoria}`;
+        }
+    </script>
+    
+</body>
+</html>
