@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Descobra sobre os Dispositivo:</h1>
+    
+   Digite o Nome de um do Dispositivo abaixo: <input type="texto" id="Dispositivo" > 
+   
+    <button onclick="exibirresumo()">Descobrir Dispositivo</button>
+    <li>Fita Cassete</li>
+    <li>CD</li>
+    <li>DVD</li>
+    <br>
+    <p id="resultado"></p>  
+
+    <script>
+        function exibirresumo() {
+            let diss = document.getElementById("Dispositivo").value;
+            let resultado;
+        
+            switch(diss) {
+                case ("Fita Cassete"):
+                    resultado="A fita cassete, também conhecida como K7 ou compact cassette, é um formato de fita magnética para gravação e reprodução de áudio. Foi um dos formatos de mídia musical mais populares do século XX";
+                    break;
+
+                    case ("CD"):
+                  resultado= " O Compact Disc (CD ou Disco Compacto) é um disco óptico digital de armazenamento de dados. O formato foi originalmente desenvolvido com o propósito de armazenar e tocar apenas músicas, mas posteriormente foi adaptado para o armazenamento de dados, o CD-ROM.";
+                  break;
+                 
+                   case ("DVD"):
+                  resultado= " DVD é a sigla para Digital Versatile Disc ou Digital Video Disc, e refere-se a um formato de disco óptico usado para armazenar dados, especialmente filmes e vídeos. É um disco pequeno e redondo que usa um laser para ler informações gravadas em trilhas. ";
+                  break;
+
+                default: 
+                resultado="Dispositivo invalido"
+            
+            }
+            document.getElementById("resultado").innerHTML= resultado
+        }
+    </script>
+</body>
+</html>

@@ -6,6 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Descobra seu Signo</h1>
+    Digite o mes de 1-12: <input type="number" id="signo" min="1" max="12">
+    <button onclick="exibirsigno()">Ver signo</button>
+    <p id="resultado"></p>  
+
+    <script>
+        function exibirsigno() {
+            let mes = parseInt(document.getElementById("signo").value);
+            let resultado;
+        
+            switch(mes) {
+                case 1:
+                    resultado="Capriornio e Aquario";
+                    break;
+
+                    case 2:
+                  resultado= "  Aquario e Peixe";
+                  break;
+                 
+                default: 
+                resultado="Mes invalido"
+            
+            }
+            document.getElementById("resultado").innerHTML=`O mes selecionado foi ${mes} e o signo e ${resultado}`
+        }
+    </script>
 </body>
 </html>
